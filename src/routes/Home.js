@@ -9,6 +9,7 @@ import AgendaGG from '../components/agenda/index';
 import Reunioes from '../components/reunioes/index';
 import Ideias from  '../components/ideias/index';
 import Unidades from '../components/unidades/index';
+import Documentos from '../components/documentos/index';
 export default class Home extends Component{
 
   
@@ -40,6 +41,11 @@ export default class Home extends Component{
                   </Row>
                   <Row>
                     <Unidades />
+                  </Row>
+                  <Row>
+                    <Col s={6}>
+                      <Documentos />
+                    </Col>
                   </Row>
 
                     

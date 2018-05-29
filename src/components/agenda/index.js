@@ -10,7 +10,7 @@ class AgendaGG extends Component{
         agenda:[]
     }
     componentDidMount(){
-        axios.get('http://localhost/ggnomotor/modules/reunioes/services/Lista.php',{
+        axios.get('http://localhost/ggnomotor/modules/agenda/services/Lista.php',{
           headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
           responseType:'json',
         }).then(res=>{

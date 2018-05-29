@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Table} from 'react-materialize';
 
 class TableView extends Component {
 
@@ -11,8 +11,8 @@ class TableView extends Component {
     
     
     return (
-        <div className="container">
-          <table className="highlight">
+        <div >
+          <Table className="highlight striped">
             <thead>
               <tr>
                   <th>Data </th>
@@ -27,19 +27,19 @@ class TableView extends Component {
 
              { 
                this.props.data.map((f,i)=>{
-               return ( <tr key={i}><a href={f.arquivo}>
+               return ( <tr key={i}>
                
-                <td>{f.data}</td>
-                <td>{f.titulo}</td>
-                <td>{f.chave}</td>
+                <td><a href={f.arquivo}>{f.data} </a></td>
+                <td><a href={f.arquivo}>{f.titulo}</a></td>
+                <td><a href={f.arquivo}>{f.descricao}</a></td>
                 
-                </a> </tr>)
+                </tr>)
                })
              
                 
              }
           </tbody>
-          </table> 
+          </Table> 
       </div>
     );
   }
