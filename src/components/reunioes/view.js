@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Collapsible,CollapsibleItem,Row,Col,Card} from 'react-materialize';
 import axios from 'axios';
 
-class Reunioes extends Component{
+class View extends Component{
     constructor(){
         super();
     }
@@ -23,10 +23,12 @@ class Reunioes extends Component{
     }
 
     render(){
-        return (<div>
+        return (<div className="container" >
+                <Row>
+                    <h3> Reuniões dos Comitês </h3>
                    
-                   <Col s={12}>
-                        <Card className="grey lighten-5" text-className="black-text" title="Reuniões dos Comitês" actions={[<a href="#/reunioes">Todas</a>]}>
+                   <Row>
+                        
                             <Collapsible>
                                {  
                                    this.state.reunioes.map((f,k)=>{
@@ -39,11 +41,11 @@ class Reunioes extends Component{
                                 })
                                }
                             </Collapsible>
-                        </Card>
-                    </Col>
-                   
+                       
+                   </Row>
+                   </Row>
                 </div>
             );
     }
 }
-export default Reunioes;
+export default View;

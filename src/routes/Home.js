@@ -10,6 +10,7 @@ import Reunioes from '../components/reunioes/index';
 import Ideias from  '../components/ideias/index';
 import Unidades from '../components/unidades/index';
 import Documentos from '../components/documentos/index';
+
 export default class Home extends Component{
 
   
@@ -32,19 +33,23 @@ export default class Home extends Component{
                   <Row>
                     <Col s={6}>
                       <Noticias />
+                      <Unidades />
                     </Col>
                     <Col s={6}>
                       <div className="container">
-                        <Ideias />
+                        <Ideias />   
                       </div>
                      </Col>
                   </Row>
                   <Row>
-                    <Unidades />
+                   
                   </Row>
                   <Row>
                     <Col s={6}>
                       <Documentos />
+                    </Col>
+                    <Col s={6}>
+                      <Reunioes />
                     </Col>
                   </Row>
 

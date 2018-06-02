@@ -8,6 +8,7 @@ import FooterPage from '../components/tools/FooterPage';
 import Home from './Home';
 import Indicadores from '../components/indicadores/view';
 import Agenda from '../components/agenda/view';
+import Reunioes from '../components/reunioes/view';
 
 export default ()=> (
   
@@ -20,6 +21,7 @@ export default ()=> (
                     <Route exact path='/' component={Home} />
                     <Route exact path='/indicadores' component={Indicadores} />
                     <Route exact path='/agenda' component={Agenda} />
+                    <Route exact path='/reunioes' component={Reunioes} />
                     </div>
                 <Parallax imageSrc="images/paralax2.jpg" alt />
             <FooterPage />
