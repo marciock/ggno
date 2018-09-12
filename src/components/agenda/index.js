@@ -10,12 +10,14 @@ class AgendaGG extends Component{
         agenda:[]
     }
     componentDidMount(){
-        axios.get('http://localhost/ggnomotor/modules/agenda/services/Lista.php',{
+       
+        const host='http://10.17.12.218/ggnomotor/modules/agenda/services/Last.php'
+        axios.get(host,{
           headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
           responseType:'json',
         }).then(res=>{
   
-            console.log(res.data)
+          //  console.log(res.data)
           this.setState({agenda:res.data});
             
         });
@@ -30,7 +32,8 @@ class AgendaGG extends Component{
                             <Collapsible>
                                {  
                                    this.state.agenda.map((f,k)=>{
-                                       let linha=`${f.data} ${f.assunto} local:${f.cidade} - inicio: ${f.hora_inicial} término:${f.hora_final}`
+                                    const mydata=f.data
+                                       let linha=`${mydata.split('-').reverse().join('/')} ${f.assunto} local:${f.cidade} - inicio: ${f.hora_inicial} término:${f.hora_final}`
                                   return (                           
                                     <CollapsibleItem header={linha} icon="event_note" key={k}>
                                         <p>{f.descricao}</p>

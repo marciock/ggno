@@ -3,7 +3,7 @@ import TableView from './TableView';
 
 import axios from 'axios';
 
-class Documentos extends Component {
+class TodosDocumentos extends Component {
   constructor(){
     super();
    
@@ -13,7 +13,7 @@ class Documentos extends Component {
     documentos:[]
   }
   componentDidMount(){
-      axios.get('http://10.17.12.218/ggnomotor/modules/documentos/services/Last.php',{
+      axios.get('http://10.17.12.218/ggnomotor/modules/documentos/services/Lista.php',{
         headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
         responseType:'json',
       }).then(res=>{
@@ -42,4 +42,4 @@ class Documentos extends Component {
   }
 }
 
-export default Documentos;
+export default TodosDocumentos;

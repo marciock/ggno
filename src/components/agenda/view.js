@@ -10,7 +10,7 @@ class View extends Component{
         agenda:[]
     }
     componentDidMount(){
-        axios.get('http://localhost/ggnomotor/modules/agenda/services/Lista.php',{
+        axios.get('http://10.17.12.218/ggnomotor/modules/agenda/services/Lista.php',{
           headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
           responseType:'json',
         }).then(res=>{
@@ -32,7 +32,8 @@ class View extends Component{
                             <Collapsible>
                                {  
                                    this.state.agenda.map((f,k)=>{
-                                       let linha=`${f.data} ${f.assunto} local:${f.cidade} - inicio: ${f.hora_inicial} término:${f.hora_final}`
+                                       const mydata=f.data
+                                       let linha=`${mydata.split('-').reverse().join('/')} ${f.assunto} local:${f.cidade} - inicio: ${f.hora_inicial} término:${f.hora_final}`
                                   return (                           
                                     <CollapsibleItem header={linha} icon="event_note" key={k}>
                                         <p>{f.descricao}</p>

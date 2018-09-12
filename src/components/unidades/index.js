@@ -17,18 +17,18 @@ class Unidades extends Component{
              <Row >
              
                 <Col s={6}>
-                    <Circle img={urma} text="URMA" />
+                    <Circle img={urma} text="GRMA" href="http://10.7.12.137" />
                 </Col>
                  <Col s={6}>
-                    <Circle img={urcm} text="URCM" />
+                    <Circle img={urcm} text="GRCM"   href="http://10.6.63.45/PortalURCM" />
                 </Col>
             </Row>
             <Row>
                  <Col s={6}>
-                    <Circle img={urpv} text="URPV" />
+                    <Circle img={urpv} text="GRPV"  href="#"  />
                 </Col>
                 <Col s={6}>
-                    <Circle img={urum} text="URUM" />
+                    <Circle img={urum} text="GRUM"  href="http://aquarius/"  />
                 </Col>
             </Row>
             </div>

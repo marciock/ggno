@@ -10,7 +10,7 @@ class View extends Component{
         indicadores:[]
     }
     componentDidMount(){
-        axios.get('http://localhost/ggnomotor/modules/indicadores/services/Lista.php',{
+        axios.get('http://10.17.12.218/modules/indicadores/services/Last.php',{
           headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
           responseType:'json',
         }).then(res=>{
@@ -32,6 +32,7 @@ class View extends Component{
                     return ( <div className="col s3" key={k}>
                             <Card className='small' header={<CardTitle image={f.arquivo}>Indicadores - {f.mes}/{f.ano} </CardTitle>}
                                     actions={[<div className="col s2"><a href={f.arquivo} className="btn-flat black-text">Visualizar</a></div>
+                                    
                                     ]} >
                               
                             </Card> 

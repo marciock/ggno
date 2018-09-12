@@ -8,8 +8,10 @@ class Circle extends Component{
         return (
             <div >
                 <Row style={{textAlign:'center'}}>
-                    <img src={this.props.img} style={{borderRadius:'10px'}}/>
-                    <h4 >{this.props.text}</h4>
+                    <a href={this.props.href}>
+                        <img src={this.props.img} style={{borderRadius:'10px'}}/>
+                        <h4 >{this.props.text}</h4>
+                    </a>
                 </Row>
             </div>
         );

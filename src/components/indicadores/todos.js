@@ -3,23 +3,23 @@ import TableView from './TableView';
 
 import axios from 'axios';
 
-class Documentos extends Component {
+class TodosIndicadores extends Component {
   constructor(){
     super();
    
    
   }
   state={
-    documentos:[]
+    db:[]
   }
   componentDidMount(){
-      axios.get('http://10.17.12.218/ggnomotor/modules/documentos/services/Last.php',{
+      axios.get('http://10.17.12.218/ggnomotor/modules/indicadores/services/Lista.php',{
         headers:{'Acces-Control-Allow-Origin':'*','Content-Type':'application/json'},
         responseType:'json',
       }).then(res=>{
 
         //  console.log(res.data)
-        this.setState({documentos:res.data});
+        this.setState({db:res.data});
           
       });
     
@@ -30,9 +30,9 @@ class Documentos extends Component {
       <div >
     
       <div className="container">
-        <h3 >Documentos</h3>
+        <h3 >Indicadores</h3>
      
-        <TableView data={this.state.documentos} />
+        <TableView data={this.state.db} />
       
         </div>
       </div>
@@ -42,4 +42,4 @@ class Documentos extends Component {
   }
 }
 
-export default Documentos;
+export default TodosIndicadores;

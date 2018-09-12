@@ -15,9 +15,9 @@ class TableView extends Component {
           <Table className="highlight striped">
             <thead>
               <tr>
-                  <th>Data </th>
                   <th>Título</th>
-                  <th>Descricao</th>
+                  <th>Descrição</th>
+                  <th>Período</th>
                  
                  
               </tr>
@@ -27,14 +27,13 @@ class TableView extends Component {
 
              { 
                this.props.data.map((f,i)=>{
-                 const mydata=f.data
                return ( <tr key={i}>
+               
+               <td><a href={f.arquivo}>{f.titulo}</a></td>
+               <td><a href={f.arquivo}>{f.descricao}</a></td>
+              <td><a href={f.arquivo}> {f.mes}/{f.ano}</a></td>
                 
-                <td><a href={f.arquivo}>{mydata.split('-').reverse().join('/')} </a></td>
-                <td><a href={f.arquivo}>{f.titulo}</a></td>
-                <td><a href={f.arquivo}>{f.descricao}</a></td>
-                
-                </tr>)
+                 </tr>)
                })
              
                 
